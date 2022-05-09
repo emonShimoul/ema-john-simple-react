@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Inventory from './components/Inventory/Inventory';
 import NotFound from './components/NotFound/NotFound';
 import OrderReview from './components/OrderReview/OrderReview';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 import Shop from './components/Shop/Shop';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/orders" element={<OrderReview></OrderReview>}></Route>
           <Route path="/inventory" element={<Inventory></Inventory>}></Route>
+          <Route path="/placeorder" element={<PlaceOrder></PlaceOrder>}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </BrowserRouter>
