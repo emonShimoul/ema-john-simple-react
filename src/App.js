@@ -6,6 +6,7 @@ import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import OrderReview from './components/OrderReview/OrderReview';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
 import Shop from './components/Shop/Shop';
 import AuthProvider from './context/AuthProvider';
@@ -21,7 +22,7 @@ function App() {
             <Route path="/shop" element={<Shop />}></Route>
             <Route path="/orders" element={<OrderReview></OrderReview>}></Route>
             <Route path="/inventory" element={<Inventory></Inventory>}></Route>
-            <Route path="/placeorder" element={<PlaceOrder></PlaceOrder>}></Route>
+            <Route path="/placeorder" element={<PrivateRoute><PlaceOrder /></PrivateRoute>}></Route>
             <Route path="/login" element={<Login></Login>}></Route>
             <Route path="/register" element={<Register></Register>}></Route>
             <Route path="*" element={<NotFound />}></Route>
