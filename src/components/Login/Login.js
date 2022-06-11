@@ -1,15 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
     const { signInUsingGoogle} = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log("came from ", location.state?.from);
     return (
         <div className='login-form'>
             <div>
                 <h2>Login</h2>
-                <form action="" onSubmit="">
+                <form>
                     <input type="email" name="" id="" placeholder='Your Email' />
                     <br />
                     <input type="password" name="" id="" />
