@@ -4,10 +4,19 @@ import useAuth from '../../hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
-    const { signInUsingGoogle} = useAuth();
+    const { signInUsingGoogle } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
-    console.log("came from ", location.state?.from);
+    const redirect_uri = location.state?.from || '/shop';
+    // console.log("came from ", location.state?.from);
+
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+        .then(result => {
+            // console.log(result.user);
+            navigate(redirect_uri);
+        })
+    }
     return (
         <div className='login-form'>
             <div>
@@ -23,7 +32,7 @@ const Login = () => {
                 <div>----------------or---------------</div><br />
                 <button 
                 className='btn-regular'
-                onClick={signInUsingGoogle}
+                onClick={handleGoogleLogin}
                 >Google Sign In</button>
             </div>
         </div>
