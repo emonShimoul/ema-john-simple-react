@@ -9,10 +9,17 @@ export default initializeAuthentication;
 
 /* steps for authentication
 ----------------------------
-Initial Setup
+Step 1: Initial Setup
 1. firebase: create project
 2. create web app
 3. get configuration
 4. initialize firebase
 5. enable auth method
+
+----------------------------
+
+Step 2:
+1. Create Login Component
+2. Create Register Component
+3. Create route for Login and Register
 */

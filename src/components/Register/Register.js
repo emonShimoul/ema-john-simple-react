@@ -1,20 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Login.css';
 
-const Login = () => {
+const Register = () => {
     return (
         <div className='login-form'>
             <div>
-                <h2>Login</h2>
-                <form action="" onSubmit="">
+                <h2>Create Account</h2>
+                <form onSubmit="">
                     <input type="email" name="" id="" placeholder='Your Email' />
                     <br />
-                    <input type="password" name="" id="" />
+                    <input type="password" name="" id="" placeholder='Your Password' />
+                    <br />
+                    <input type="password" name="" id="" placeholder='Re-enter Password' />
                     <br />
                     <input type="submit" value="Submit" />
                 </form>
-                <p>New to Ema-John?? <Link to="/register">Create Account</Link></p>
+                <p>Already have an account?? <Link to="/login">Login</Link></p>
                 <div>----------------or---------------</div><br />
                 <button className='btn-regular'>Google Sign In</button>
             </div>
@@ -22,4 +23,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
