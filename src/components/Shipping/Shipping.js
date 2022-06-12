@@ -2,16 +2,23 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import useCart from '../../hooks/useCart';
+import useProducts from '../../hooks/useProducts';
+import { clearTheCart } from '../../utilities/fakedb';
 import './Shipping.css';
 
 const Shipping = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const {user} = useAuth();
     const navigate = useNavigate();
+    const [products, setProducts] = useProducts();
+    const [cart, setCart] = useCart(products);
 
     const onSubmit = data => {
         console.log(data);
         navigate('/placeorder');
+        setCart([]);
+        clearTheCart();
     };
     return (
         <div>
