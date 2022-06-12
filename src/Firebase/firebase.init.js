@@ -8,6 +8,7 @@ const initializeAuthentication = () => {
 export default initializeAuthentication;
 
 /* steps for authentication
+
 ----------------------------
 Step 1: Initial Setup
 1. firebase: create project
@@ -42,4 +43,9 @@ Step 4: Create Auth Context Hook (useAuth)
 Step 5: Create Private Route
 1. Create private route
 2. Set private route
+
+----------------------------
+Step 6: Redirect After Login
+1. After login redirect user to their desired destination
+
 */
