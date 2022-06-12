@@ -27,7 +27,7 @@ const Login = () => {
                     <br />
                     <input type="submit" value="Submit" />
                 </form>
-                <p>New to Ema-John?? <Link to="/register">Create Account</Link></p>
+                <p>New to Ema-John Website?? <Link to="/register">Create Account</Link></p>
                 <div>----------------or---------------</div><br />
                 <button 
                 className='btn-regular'
