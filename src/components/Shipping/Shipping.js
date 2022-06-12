@@ -11,6 +11,7 @@ const Shipping = () => {
     };
     return (
         <div>
+            {/* react hook form */}
             <form className='shipping-form' onSubmit={handleSubmit(onSubmit)}>
 
                 <input defaultValue={user.displayName} {...register("name")} />
