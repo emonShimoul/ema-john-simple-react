@@ -1,13 +1,17 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Shipping.css';
 
 const Shipping = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const {user} = useAuth();
+    const navigate = useNavigate();
+
     const onSubmit = data => {
-        console.log(data)
+        console.log(data);
+        navigate('/placeorder');
     };
     return (
         <div>
