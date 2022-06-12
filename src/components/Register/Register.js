@@ -2,11 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+
+    const handleRegister = (e) => {
+        e.preventDefault();
+    }
     return (
         <div className='login-form'>
             <div>
                 <h2>Create Account</h2>
-                <form onSubmit="">
+                <form onSubmit={handleRegister}>
                     <input type="email" name="" id="" placeholder='Your Email' />
                     <br />
                     <input type="password" name="" id="" placeholder='Your Password' />
