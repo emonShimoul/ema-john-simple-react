@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Register = () => {
 
     const handleRegister = (e) => {
+        // prevent the loading the entire page when click the submit button
         e.preventDefault();
     }
     return (
